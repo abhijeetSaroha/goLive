@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "353938728699",
+    "project_id": "go-live-e6585",
+    "storage_bucket": "go-live-e6585.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353938728699:android:9385b0bbff7e636d9bf25e",
+        "android_client_info": {
+          "package_name": "com.example.go_live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353938728699-l93unrcrmpffhirh2mo2bjf2s5je14ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkNeCXYhwJSsPXQxjhT8Cl8B_u8afo-Tw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353938728699-l93unrcrmpffhirh2mo2bjf2s5je14ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
