@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_live/providers/user_provider.dart';
 import 'package:go_live/resources/auth_methods.dart';
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.routeName: (context) => const LoginScreen(),
         SignupScreen.routeName: (context) => const SignupScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
+        // BroadcastScreen.routeName:(context) => const BroadcastScreen(isBroadcaster: true, channelId: channelId)
       },
       home: FutureBuilder(
         future: AuthMethods()

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_live/responsive/responsive.dart';
 import 'package:go_live/screens/home_screen.dart';
 import 'package:go_live/widgets/custom_butoon.dart';
 import 'package:go_live/widgets/custom_text_field.dart';
@@ -57,51 +58,53 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       body: _isLoading
           ? const LoadingIndicator()
-          : SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 18.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: size.height * 0.1,
-                    ),
-                    const Text(
-                      'Email',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+          : Responsive(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: size.height * 0.1,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: CustomTextField(
-                        controller: _emailController,
+                      const Text(
+                        'Email',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    const Text(
-                      'Password',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        child: CustomTextField(
+                          controller: _emailController,
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: CustomTextField(
-                        controller: _passwordController,
+                      const SizedBox(
+                        height: 20,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    CustomButton(
-                        text: 'Log In',
-                        onTap: () {
-                          logInUser();
-                        })
-                  ],
+                      const Text(
+                        'Password',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        child: CustomTextField(
+                          controller: _passwordController,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      CustomButton(
+                          text: 'Log In',
+                          onTap: () {
+                            logInUser();
+                          })
+                    ],
+                  ),
                 ),
               ),
             ),
